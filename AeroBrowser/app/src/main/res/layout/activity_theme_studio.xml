@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F7"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Large title like iOS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theme Studio"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Оберіть тему"
+            android:textSize="15sp"
+            android:textColor="#8E8E93"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Preview card - iOS style -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/previewCard"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/previewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aero"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/previewSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Попередній перегляд"
+                    android:textSize="15sp"
+                    android:textColor="#8E8E93"
+                    android:layout_marginTop="4dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/previewButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:text="Кнопка"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="16dp"
+                    app:cornerRadius="22dp"
+                    app:backgroundTint="#007AFF" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Compare section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ПОРІВНЯННЯ"
+            android:textSize="13sp"
+            android:textColor="#8E8E93"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/compareLeft"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+                <TextView android:id="@+id/compareLeftText" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="Тема A" android:textSize="15sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/compareRight"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+                <TextView android:id="@+id/compareRightText" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:text="Тема B" android:textSize="15sp" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCompare"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Порівняти теми"
+            android:textAllCaps="false"
+            android:layout_marginBottom="24dp"
+            app:cornerRadius="12dp"
+            app:backgroundTint="#007AFF"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- Actions group -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ТЕМА"
+            android:textSize="13sp"
+            android:textColor="#8E8E93"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSelectTheme"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Обрати"
+                android:textAllCaps="false"
+                android:layout_marginEnd="6dp"
+                app:cornerRadius="12dp"
+                app:backgroundTint="#007AFF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDuplicate"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Копія"
+                android:textAllCaps="false"
+                android:layout_marginStart="6dp"
+                app:cornerRadius="12dp"
+                app:backgroundTint="#007AFF" />
+        </LinearLayout>
+
+        <!-- Colors section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="КОЛЬОРИ"
+            android:textSize="13sp"
+            android:textColor="#8E8E93"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="6dp">
+
+            <View android:id="@+id/chipBg" android:layout_width="52dp" android:layout_height="52dp" android:layout_margin="5dp" />
+            <View android:id="@+id/chipSurface" android:layout_width="52dp" android:layout_height="52dp" android:layout_margin="5dp" />
+            <View android:id="@+id/chipAccent" android:layout_width="52dp" android:layout_height="52dp" android:layout_margin="5dp" />
+            <View android:id="@+id/chipAccent2" android:layout_width="52dp" android:layout_height="52dp" android:layout_margin="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <View android:id="@+id/chipText" android:layout_width="52dp" android:layout_height="52dp" android:layout_margin="5dp" />
+            <View android:id="@+id/chipText2" android:layout_width="52dp" android:layout_height="52dp" android:layout_margin="5dp" />
+            <View android:id="@+id/chipGlass" android:layout_width="52dp" android:layout_height="52dp" android:layout_margin="5dp" />
+            <View android:id="@+id/chipBorder" android:layout_width="52dp" android:layout_height="52dp" android:layout_margin="5dp" />
+        </LinearLayout>
+
+        <!-- Quick palette -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ШВИДКА ПАЛІТРА"
+            android:textSize="13sp"
+            android:textColor="#8E8E93"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <View android:id="@+id/pal1" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_margin="3dp" />
+            <View android:id="@+id/pal2" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_margin="3dp" />
+            <View android:id="@+id/pal3" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_margin="3dp" />
+            <View android:id="@+id/pal4" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_margin="3dp" />
+            <View android:id="@+id/pal5" android:layout_width="0dp" android:layout_height="36dp" android:layout_weight="1" android:layout_margin="3dp" />
+        </LinearLayout>
+
+        <!-- Shape section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ФОРМА"
+            android:textSize="13sp"
+            android:textColor="#8E8E93"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="8dp" />
+
+        <TextView android:id="@+id/labelRadius" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Скруглення: 24" android:textSize="15sp" />
+        <SeekBar android:id="@+id/seekRadius" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="40" android:layout_marginBottom="10dp" />
+
+        <TextView android:id="@+id/labelOpacity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Прозорість скла: 85%" android:textSize="15sp" />
+        <SeekBar android:id="@+id/seekOpacity" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="100" android:layout_marginBottom="10dp" />
+
+        <TextView android:id="@+id/labelShadow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Глибина: 6" android:textSize="15sp" />
+        <SeekBar android:id="@+id/seekShadow" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="16" android:layout_marginBottom="20dp" />
+
+        <!-- Gradient section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ГРАДІЄНТ"
+            android:textSize="13sp"
+            android:textColor="#8E8E93"
+            android:letterSpacing="0.05"
+            android:layout_marginBottom="8dp" />
+
+        <Switch
+            android:id="@+id/switchGradient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Увімкнути градієнт"
+            android:textSize="17sp"
+            android:layout_marginBottom="12dp" />
+
+        <View
+            android:id="@+id/gradientPreviewBar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <View android:id="@+id/chipGradStart" android:layout_width="56dp" android:layout_height="56dp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Початок" android:textSize="12sp" android:textColor="#8E8E93" android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <View android:id="@+id/chipGradEnd" android:layout_width="56dp" android:layout_height="56dp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Кінець" android:textSize="12sp" android:textColor="#8E8E93" android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <View android:id="@+id/gradPreset1" android:layout_width="0dp" android:layout_height="28dp" android:layout_weight="1" android:layout_margin="2dp" />
+            <View android:id="@+id/gradPreset2" android:layout_width="0dp" android:layout_height="28dp" android:layout_weight="1" android:layout_margin="2dp" />
+            <View android:id="@+id/gradPreset3" android:layout_width="0dp" android:layout_height="28dp" android:layout_weight="1" android:layout_margin="2dp" />
+            <View android:id="@+id/gradPreset4" android:layout_width="0dp" android:layout_height="28dp" android:layout_weight="1" android:layout_margin="2dp" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/labelAngle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Кут: 135°" android:textSize="15sp" />
+        <SeekBar android:id="@+id/seekAngle" android:layout_width="match_parent" android:layout_height="wrap_content" android:max="360" android:layout_marginBottom="24dp" />
+
+        <!-- Bottom actions -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnApply"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Зберегти і застосувати"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:layout_marginBottom="8dp"
+            app:cornerRadius="14dp"
+            app:backgroundTint="#007AFF" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRename"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Перейменувати"
+            android:textAllCaps="false"
+            android:layout_marginBottom="6dp"
+            app:cornerRadius="12dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExport"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Експорт"
+            android:textAllCaps="false"
+            android:layout_marginBottom="6dp"
+            app:cornerRadius="12dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnImport"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Імпорт"
+            android:textAllCaps="false"
+            android:layout_marginBottom="6dp"
+            app:cornerRadius="12dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Видалити"
+            android:textAllCaps="false"
+            android:textColor="#FF3B30"
+            android:layout_marginBottom="6dp"
+            app:cornerRadius="12dp"
+            app:strokeColor="#FF3B30"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Скинути до Arctic Glass"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+    </LinearLayout>
+</ScrollView>

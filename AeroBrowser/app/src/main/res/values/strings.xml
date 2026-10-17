@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aero Browser</string>
+    <string name="search_hint">Пошук або введіть адресу</string>
+    <string name="search_engine">Пошукова система</string>
+    <string name="privacy">Приватність</string>
+    <string name="backup">Резервне копіювання</string>
+    <string name="diagnostics">Діагностика</string>
+</resources>

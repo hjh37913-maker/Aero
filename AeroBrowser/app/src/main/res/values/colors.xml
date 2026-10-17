@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default Light -->
+    <color name="background">#F8F9FC</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_glass">#E6FFFFFF</color>
+    <color name="border_glass">#33FFFFFF</color>
+    <color name="text_primary">#1A1A1A</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="accent">#4F46E5</color>
+    <color name="link">#2563EB</color>
+    <color name="error">#DC2626</color>
+</resources>
